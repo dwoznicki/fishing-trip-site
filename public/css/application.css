@@ -6,40 +6,44 @@
 body {
   color: white;
   font-size: 1.2em;
-  background-color: #6792b9;
-}
-
-a {
-  text-decoration: none;
+  background-color: #112537;
 }
 
 nav {
   text-align: center;
-  background-color: #6792b9;
+  background-color: #112537;
 }
 
-nav ul {
-  margin: 0;
-  padding: 1.5em;
-}
-
-nav li {
-  list-style: none;
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  
   display: inline-block;
-  padding: 0 10px;
+  padding: 1em;
+}
+
+nav a:hover {
+  color: #aabed0;
 }
 
 .text {
-  margin: 0 auto 30em auto;
-  padding: 5em;
+  margin: 26em auto 2em auto;
+  padding: 3em 5em;
   width: 100%;
-  background-color: black;
+  background-color: #112537;
   opacity: 0.85;
+  line-height: 1.5em;
+
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 
 .background-pictures {
   background-image: url("../imgs/background2.png");
   background-repeat: no-repeat;
+  background-position: center;
   background-attachment: fixed;
   background-size: 100%;
 }
