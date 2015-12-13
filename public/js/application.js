@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  changePicOnScroll();
 });
 function changePicOnScroll() {
   $(window).on('scroll', function() {
