@@ -6,12 +6,12 @@
 body {
   color: white;
   font-size: 1.2em;
-  background-color: #112537;
+  background-color: #233141;
 }
 
 nav {
   text-align: center;
-  background-color: #112537;
+  background-color: #233141;
 }
 
 nav a {
@@ -24,15 +24,15 @@ nav a {
 }
 
 nav a:hover {
-  color: #aabed0;
+  color: #c6cacc;
 }
 
 .text {
-  margin: 26em auto 2em auto;
+  margin: 29em auto 2em auto;
   padding: 3em 5em;
   width: 100%;
-  background-color: #112537;
-  opacity: 0.85;
+  background-color: #233141;
+  opacity: 0.9;
   line-height: 1.5em;
 
   box-sizing: border-box;
@@ -40,10 +40,21 @@ nav a:hover {
   -moz-box-sizing: border-box;
 }
 
-.background-pictures {
-  background-image: url("../imgs/background2.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: 100%;
+#slideshow, img {
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index:-9999;
+}
+
+footer {
+  display: block;
+  height: 2em;
+  padding: 0.5em;
+  background-color: #233141;
+  text-align: center;
+  font-size: .75em;
 }

@@ -1,22 +1,21 @@
 #create new session page
-get '/sessions/new' do 
-	erb :'/sessions/session_new'
+get '/login' do 
+	return erb :'/sessions/new', layout: false
 end
 
 
 #login to session
-post '/sessions' do 
+post '/login' do 
 	user = User.find_by(email: params[:email])
-	if user && user.password = params[:password]
+	if user
 		session[:id] = user.id
-		redirect '/'
+		redirect '/prep'
 	else
-		flash[:errors] = ['Incorrect Username or Password']
+		flash[:errors] = ['Unable to find this email']
 		status 400
-		redirect '/sessions/new'
+		redirect '/'
 	end
 end
-
 
 #delete session
 delete '/sessions/:id' do

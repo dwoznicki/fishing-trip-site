@@ -1,11 +1,38 @@
-<section class="background-pictures">
+<script type="text/javascript" src="scripts/jquery.cycle.all.js"></script>
+<script src="/js/front.js"></script>
+
+
+<div id="slideshow">
+  <img src="/imgs/01.png">
+  <img src="/imgs/02.png">
+  <img src="/imgs/03.png">
+  <img src="/imgs/04.png">
+  <img src="/imgs/05.png">
+  <img src="/imgs/06.png">
+</div>
+<section>
   <nav>
     <a href="#trip">Trip</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
     <a href="#schedule">Schedule</a>
-    <a href="/sessions/new">Login</a>
+  <% if current_user %>
+    <a href="prep">Preparation</a>
+  <% else %>
+    <a href="/login" id="login">Login</a>
+  <% end %>
   </nav>
+  <div class="login-container">
+    <%if flash[:errors] %>
+      <% flash[:errors].each do |error| %>
+        <%=error%>
+      <%end %>
+    <%end %>
+    <form action='/login' method='post' name='login_form' id='login'>
+      <input type='text' placeholder='Email Address' name='email'>
+      <button type='submit'>Log In</button>
+    </form>
+  </div>
   <div id="trip" class="text">
     <h2>Trip</h2>
     <p>This is the section to write about the trip. You can put general info about where it is, what it's like, what you fish for, etc.</p>
@@ -51,5 +78,8 @@
     <h3>My email: whatever@place.com</h3>
     <h3>My email: whatever@place.com</h3>
     <h3>My email: whatever@place.com</h3>
-    </div>
+  </div>
+  <footer>
+    &copy Daniel Woznicki 2015
+  </footer>
 </section>
