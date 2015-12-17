@@ -23,6 +23,7 @@ require "sinatra/reloader" if development?
 require 'erb'
 
 require 'mailgun'
+require 'wunderground'
 require 'dotenv'
 Dotenv.load
 

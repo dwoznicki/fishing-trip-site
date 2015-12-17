@@ -22,3 +22,6 @@
 	color: white;
 	background: -webkit-linear-gradient(#87df95, #6cb277);
 }
+	.login-container button:hover {
+		background: #87df95;
+	}

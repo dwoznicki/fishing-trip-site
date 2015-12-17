@@ -1,0 +1,12 @@
+<section class="sheet">
+<h1>Forecast for Punta Allen, MX</h1>
+  <ul>
+    <% @forecast["forecast"]["txt_forecast"]["forecastday"].each do |period| %>
+    <li>
+      <h4><%= period["title"] %></h4>
+      <img src="<%= period["icon_url"] %>">
+      <%= period["fcttext"] %>
+    </li>
+    <% end %>
+  </ul>
+</section>
