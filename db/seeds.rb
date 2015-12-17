@@ -1,0 +1,5 @@
+User.create!(first_name: "Dan", last_name: "Woz", email: "dan@dan.com")
+User.create!(first_name: "Dan", last_name: "Woz", email: "dan@dan.com")
+User.create!(first_name: "Dan", last_name: "Woz", email: "dan@dan.com")
+Admin.create!(first_name: "Bob", last_name: "Woz", email: "bob@bob.com", password: "password")
+Trip.create!(name: "Punta Allen")

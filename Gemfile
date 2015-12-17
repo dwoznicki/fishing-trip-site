@@ -18,6 +18,8 @@ gem 'rake'
 
 gem 'shotgun'
 
+gem 'mailgun-ruby', '~>1.0.3'
+
 group :test do
   gem 'faker'
   gem 'rspec'

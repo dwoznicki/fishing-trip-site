@@ -20,6 +20,8 @@ delete '/sessions/:id' do
 	redirect '/'
 end
 
-get '/admin/controls' do
+get '/admin/index' do
+	@users = User.all
 	erb :'/admins/index'
 end
+

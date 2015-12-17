@@ -1,9 +1,9 @@
 class CreateArticlesTable < ActiveRecord::Migration
   def change
-  	t.string :title
-  	t.text :body
-  	t.string :author
-
-  	t.timestamps(null: false)
+  	create_table :articles do |t|
+	  	t.string :title
+	  	t.text :body
+  		t.timestamps(null: false)
+  	end
   end
 end
