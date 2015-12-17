@@ -2,7 +2,7 @@
 	<h3>Update A User</h3>
 	<% users.each do |user| %>
 
-		<form action='/' method='POST'>
+		<form action='/users/<%= user.id %>' method='POST'>
 			<input type="hidden" name='_method' value='put'>
 			<input type='text' value='<%= user.first_name %>' name='first_name'>
 			<input type='text' value='<%= user.last_name %>' name='last_name'>
@@ -10,7 +10,7 @@
 			<input type='submit' value='save changes'>
 		</form>
 
-		<form >
+		<form action='/users/<%= user.id %>'>
 			<input type="hidden" name='_method' value='delete'>
 			<input type='submit' value='delete user'>
 		</form>

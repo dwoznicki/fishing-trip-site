@@ -1,16 +1,16 @@
 <h2>What would you like to do?</h2>
 <ul>
 	<li><a href="/users/new">Add New User</a></li>
-		<%= erb :'users/_new' %>
+		<%= erb :'users/_new', layout: false %>
 
 	<li><a href="/admin/delete_user">Edit Users</a></li>
-		<%= erb :'users/_update' locals: {users: @users}%>
+		<%= erb :'users/_update', layout: false, locals: {users: @users}%>
 
 	<li><a href="/admin/add_user_to_trip">Add a user to a trip</a></li>
-	
+
+  <li><a href="/admin/add_trip">Add a new trip</a></li>
+
 	<li><a href="/admin/update_article">Update an article</a></li>
-
-	<li><a href="/admin/add_trip">Add a new trip</a></li>
-
+    <%= erb :'articles/_index', layout: false, locals: {articles: @articles} %>
 
 </ul>

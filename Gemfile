@@ -21,6 +21,7 @@ gem 'shotgun'
 gem 'mailgun-ruby', '~>1.0.3'
 
 group :test do
+  gem 'dotenv'
   gem 'faker'
   gem 'rspec'
 end

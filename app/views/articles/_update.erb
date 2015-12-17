@@ -1,0 +1,14 @@
+<div id="edit-article-form">
+  <h3>Edit an Article</h3>
+    <form action='/articles/<%= article.id %>' method='POST'>
+      <input type="hidden" name='_method' value='put'>
+      <input type='text' value='<%= article.title %>' name='title'>
+      <textarea name='body'><%= article.body %></textarea>
+      <input type='submit' value='save changes'>
+    </form>
+
+    <form action='/articles/<%= article.id %>'>
+      <input type="hidden" name='_method' value='delete'>
+      <input type='submit' value='delete article'>
+    </form>
+</div>
