@@ -1,0 +1,19 @@
+<div id="update-user-form">
+	<h3>Update A User</h3>
+	<% users.each do |user| %>
+
+		<form action='/' method='POST'>
+			<input type="hidden" name='_method' value='put'>
+			<input type='text' value='<%= user.first_name %>' name='first_name'>
+			<input type='text' value='<%= user.last_name %>' name='last_name'>
+			<input type='text' value='<%= user.email %>' name='email'>
+			<input type='submit' value='save changes'>
+		</form>
+
+		<form >
+			<input type="hidden" name='_method' value='delete'>
+			<input type='submit' value='delete user'>
+		</form>
+
+	<% end %>
+</div>
