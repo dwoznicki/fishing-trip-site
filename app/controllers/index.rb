@@ -1,5 +1,4 @@
 enable :sessions
-require 'pp'
 use Rack::Flash
 
 get '/' do
