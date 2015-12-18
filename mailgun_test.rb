@@ -1,8 +1,3 @@
-require 'mailgun'
-require 'dotenv'
-require 'pp'
-Dotenv.load
-
 mg_client = Mailgun::Client.new ENV["SECRET_KEY"]
 
 # message_params = {

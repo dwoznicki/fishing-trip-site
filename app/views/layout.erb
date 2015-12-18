@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="/css/prep.css">
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script type="text/javascript" src="scripts/jquery.cycle.all.js"></script>
+  <script type="text/javascript" src="/scripts/jquery.cycle.all.js"></script>
   <script src="/js/application.js"></script>
 
 
@@ -23,14 +23,15 @@
 </head>
 <body>
   <nav>
+  <% if current_user %>
+    <a href="/">Home</a>
+    <a href="/prep">Preparation</a>
+    <a href="/logout">Logout</a>
+  <% else %>
     <a href="#trip">Trip</a>
     <a href="#about">About</a>
     <a href="#schedule">Schedule</a>
     <a href="#contact">Contact</a>
-  <% if current_user %>
-    <a href="/prep">Preparation</a>
-    <a href="/logout">Logout</a>
-  <% else %>
     <a href="/login" id="login">Login</a>
   <% end %>
   </nav>

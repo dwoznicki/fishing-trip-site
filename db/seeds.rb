@@ -3,7 +3,6 @@ User.create!(first_name: "Tim", last_name: "Guy", email: "tim@tim.com")
 User.create!(first_name: "Jon", last_name: "Folk", email: "jon@jon.com")
 Admin.create!(first_name: "Bob", last_name: "Woz", email: "bob@bob.com", password: "password")
 
-Trip.create!(name: "Punta Allen")
 
 Article.create(
   title: "Trip",

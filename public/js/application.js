@@ -2,6 +2,10 @@ $(document).ready(function() {
   rotateBackground();
   showLogin();
   changeTab();
+  showNewUserForm();
+  showEditUserForm();
+  showArticlesIndex();
+  showNewTripForm();
 });
 
 function rotateBackground() {
@@ -36,3 +40,35 @@ function changeTab() {
     $("#" + newSheet).removeClass("hidden").show();
   });
 };
+
+function showNewUserForm() {
+  $(".sheet").on("click", "#show-new-user-form", function(e) {
+    e.preventDefault();
+    $(".sheet a").siblings().hide();
+    $("#new-user-form").slideDown();
+  })
+}
+
+function showEditUserForm() {
+  $(".sheet").on("click", "#show-edit-user-form", function(e) {
+    e.preventDefault();
+    $(".sheet a").siblings().hide();
+    $("#edit-user-form").slideDown();
+  })
+}
+
+function showArticlesIndex() {
+  $(".sheet").on("click", "#show-articles-index", function(e) {
+    e.preventDefault();
+    $(".sheet a").siblings().hide();
+    $("#articles-index").slideDown();
+  })
+}
+
+function showNewTripForm() {
+  $(".sheet").on("click", "#show-new-trip-form", function(e) {
+    e.preventDefault();
+    $(".sheet a").siblings().hide();
+    $("#new-trip-form").slideDown();
+  })
+}
