@@ -1,6 +1,3 @@
-<script type="text/javascript" src="scripts/jquery.cycle.all.js"></script>
-<script src="/js/front.js"></script>
-
 
 <div id="slideshow">
   <img src="/imgs/01.png">
@@ -10,75 +7,28 @@
   <img src="/imgs/05.png">
   <img src="/imgs/06.png">
 </div>
+
 <section>
-  <nav>
-    <a href="#trip">Trip</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-    <a href="#schedule">Schedule</a>
-  <% if current_user %>
-    <a href="prep">Preparation</a>
-  <% else %>
-    <a href="/login" id="login">Login</a>
-  <% end %>
-  </nav>
-  <div class="login-container">
-    <%if flash[:errors] %>
-      <% flash[:errors].each do |error| %>
-        <%=error%>
-      <%end %>
-    <%end %>
-    <form action='/login' method='post' name='login_form' id='login'>
-      <input type='text' placeholder='Email Address' name='email'>
-      <button type='submit'>Log In</button>
-    </form>
-  </div>
+
   <div id="trip" class="text">
-    <h2>Trip</h2>
-    <p>This is the section to write about the trip. You can put general info about where it is, what it's like, what you fish for, etc.</p>
-    <p>
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    </p>
-    <p>
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    </p>
-    <p>
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    </p>
-    <p>
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    </p>
+    <h2><%= @trip.title %></h2>
+    <div><%= @trip.body %></div>
   </div>
 
   <div id="about" class="text">
-    <h2>About</h2>
-    <p>This is the section to write about yourselves, Fish First, etc.</p>
-    <p>
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    </p>
-    <p>
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    </p>
-    <p>
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    </p>
-    <p>
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    </p>
+    <h2><%= @about.title %></h2>
+    <div><%= @about.body %></div>
   </div>
 
   <div id="schedule" class="text">
     <h2>Schedule</h2>
-    <p>This section will contain information about upcoming trips.</p>
   </div>
 
   <div id="contact" class="text">
-    <h2>Contact</h2>
-    <p>This section will contain contact information.</p>
-    <h3>My email: whatever@place.com</h3>
-    <h3>My email: whatever@place.com</h3>
-    <h3>My email: whatever@place.com</h3>
+    <h2><%= @contact.title %></h2>
+    <div><%= @contact.body %></div>
   </div>
+
   <footer>
     &copy Daniel Woznicki 2015
   </footer>

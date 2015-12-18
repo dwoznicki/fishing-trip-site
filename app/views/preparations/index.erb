@@ -1,0 +1,26 @@
+<section id="tabs">
+  <div class="tab active"><a href="weather">Weather</a></div>
+  <div class="tab"><a href="checklist">Checklist</a></div>
+  <div class="tab"><a href="reading">Reading</a></div>
+</section>
+
+<section class="sheet" id="weather">
+<h1>Forecast for Punta Allen, MX</h1>
+  <ul>
+    <% @forecast["forecast"]["txt_forecast"]["forecastday"].each do |period| %>
+    <li>
+      <h4><%= period["title"] %></h4>
+      <img src="<%= period["icon_url"] %>">
+      <%= period["fcttext"] %>
+    </li>
+    <% end %>
+  </ul>
+</section>
+
+<section class="sheet hidden" id="checklist">
+
+</section>
+
+<section class="sheet hidden" id="reading">
+
+</section>

@@ -1,8 +1,8 @@
-get '/admin' do 
-	erb :'/admins/login'
+get '/admin/login' do
+	erb :'admins/login'
 end
 
-post '/admin/login' do 
+post '/admin/login' do
 	user = User.find_by(email: params[:email])
 	if user && user.password = params[:password]
 		session[:id] = user.id
@@ -20,8 +20,9 @@ delete '/sessions/:id' do
 	redirect '/'
 end
 
-get '/admin/index' do
+get '/admin' do
 	@users = User.all
-	erb :'/admins/index'
+	@articles = Article.all
+	erb :'admins/index'
 end
 

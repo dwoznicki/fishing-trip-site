@@ -1,0 +1,4 @@
+<% articles.each do |article| %>
+  <a href="/articles/<%= article.id %>"><%= article.title %></a>
+    <%= erb :'articles/_update', layout: false, locals: {article: article} %>
+<% end %>

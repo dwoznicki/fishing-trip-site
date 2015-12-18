@@ -1,0 +1,26 @@
+a {
+  color: black;
+  text-decoration: none;
+}
+
+#tabs {
+  margin: 1em 0 0 7em;
+}
+
+.tab {
+  background-color: white;
+  display: inline-block;
+  padding: 0.5em;
+}
+
+.active {
+  border: 2px solid green;
+  border-bottom: 2px solid white;
+}
+
+.sheet {
+  color: black;
+  background-color: white;
+  margin: auto 6em;
+  padding: 2em;
+}
