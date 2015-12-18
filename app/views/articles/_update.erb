@@ -1,17 +1,16 @@
 <%if flash[:errors] %>
-    <ul>
-    <% flash[:errors].each do |error| %>
-      <li><%=error%></li>
-    <%end %>
-    </ul>
+  <ul>
+  <% flash[:errors].each do |error| %>
+    <li><%=error%></li>
   <%end %>
+  </ul>
+<%end %>
 
 <div id="edit-article-form">
-  <h3>Edit an Article</h3>
     <form action='/articles/<%= article.id %>' method='POST'>
       <input type="hidden" name='_method' value='put'>
-      <input type='text' value='<%= article.title %>' name='title'>
-      <textarea name='body'><%= article.body %></textarea>
+      <input type='text' value='<%= article.title %>' name='title'><br>
+      <textarea name='body' cols=50 rows=10><%= article.body %></textarea><br>
       <input type='submit' value='save changes'>
     </form>
 

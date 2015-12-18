@@ -1,17 +1,22 @@
-<div id="update-user-form">
-	<h3>Update A User</h3>
+<div id="edit-user-form" class="hidden">
 	<% users.each do |user| %>
 
 		<form action='/users/<%= user.id %>' method='POST'>
-			<input type="hidden" name='_method' value='put'>
+			<input type="hidden" name='_method' value='PUT'>
 			<input type='text' value='<%= user.first_name %>' name='first_name'>
 			<input type='text' value='<%= user.last_name %>' name='last_name'>
-			<input type='text' value='<%= user.email %>' name='email'>
+			<input type='text' value='<%= user.email %>' name='email'><br>
+			<p>Current trip: <%= user.trip.location if user.trip %></p>
+			<select name='trip'>
+				<% trips.each do |trip| %>
+					<option value='<%= trip.location %>'><%= trip.location %></option>
+				<% end %>
+			</select><br>
 			<input type='submit' value='save changes'>
 		</form>
 
-		<form action='/users/<%= user.id %>'>
-			<input type="hidden" name='_method' value='delete'>
+		<form action='/users/<%= user.id %>' method='POST'>
+			<input type="hidden" name='_method' value='DELETE'>
 			<input type='submit' value='delete user'>
 		</form>
 

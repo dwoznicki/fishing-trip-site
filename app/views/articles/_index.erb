@@ -1,4 +1,6 @@
-<% articles.each do |article| %>
-  <a href="/articles/<%= article.id %>"><%= article.title %></a>
+<div id="articles-index" class="hidden">
+  <h3>Update Articles</h3>
+  <% articles.each do |article| %>
     <%= erb :'articles/_update', layout: false, locals: {article: article} %>
-<% end %>
+  <% end %>
+</div>

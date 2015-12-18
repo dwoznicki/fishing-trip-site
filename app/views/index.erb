@@ -1,4 +1,3 @@
-
 <div id="slideshow">
   <img src="/imgs/01.png">
   <img src="/imgs/02.png">
@@ -22,6 +21,12 @@
 
   <div id="schedule" class="text">
     <h2>Schedule</h2>
+    <% @schedule.each do |trip| %>
+      <h4><%= trip.name %></h4>
+      <p>Location: <%= trip.location %></p>
+      <p><%= trip.start_date %> - <%= trip.end_date %></p>
+      <p>Cost: $<%= trip.price %></p>
+    <% end %>
   </div>
 
   <div id="contact" class="text">
@@ -30,6 +35,9 @@
   </div>
 
   <footer>
-    &copy Daniel Woznicki 2015
+    <p>
+      &copy Daniel Woznicki 2015
+      <a href="/admin">admin login</a>
+    </p>
   </footer>
 </section>
