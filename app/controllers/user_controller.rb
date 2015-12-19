@@ -1,4 +1,4 @@
-#show all users
+#show all users_
 get '/users' do
 	@users = User.all
 	erb :'/users/user_index'
